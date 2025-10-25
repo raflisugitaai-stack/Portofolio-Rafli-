@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import GenerativeAIProjectCard from "@/components/GenerativeAIProjectCard";
 import { Separator } from "@/components/ui/separator";
 import { CameraIcon, Trash2 } from "lucide-react";
 import { showSuccess, showError } from "@/utils/toast";
@@ -51,30 +50,6 @@ const HomePage = () => {
   const handleButtonClick = () => {
     fileInputRef.current?.click();
   };
-
-  const featuredProjects = [
-    {
-      title: "Generator Gambar AI",
-      description: "Membuat gambar unik dari deskripsi teks menggunakan model difusi canggih.",
-      imageUrl: "/placeholder.svg", // Ganti dengan gambar proyek Anda
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Pembuat Video Otomatis",
-      description: "Mengubah skrip teks menjadi video dinamis dengan narasi dan visual yang dihasilkan AI.",
-      imageUrl: "/placeholder.svg", // Ganti dengan gambar proyek Anda
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      title: "Asisten Penulisan Teks AI",
-      description: "Membantu pembuatan konten, ringkasan, dan ide tulisan dengan model bahasa besar.",
-      imageUrl: "/placeholder.svg", // Ganti dengan gambar proyek Anda
-      liveUrl: "#",
-      githubUrl: "#",
-    },
-  ];
 
   return (
     <Layout>
@@ -132,22 +107,6 @@ const HomePage = () => {
           </Button>
         </div>
       </div>
-
-      <Separator className="my-12 max-w-6xl mx-auto" />
-
-      <section className="py-12 px-4">
-        <h2 className="text-4xl font-bold text-center mb-10 text-foreground">Proyek Unggulan Generative AI</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {featuredProjects.map((project, index) => (
-            <GenerativeAIProjectCard key={index} {...project} />
-          ))}
-        </div>
-        <div className="text-center mt-12">
-          <Button asChild size="lg" className="px-8 py-3 text-lg">
-            <Link to="/projects">Lihat Semua Proyek</Link>
-          </Button>
-        </div>
-      </section>
     </Layout>
   );
 };
