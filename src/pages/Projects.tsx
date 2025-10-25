@@ -9,7 +9,7 @@ const ProjectsPage = () => {
     {
       title: "Tugas 1 – Studi Kasus AI di Bidang Tertentu",
       description: "Analisis mendalam tentang penerapan Generative AI dalam industri spesifik, menyoroti tantangan dan solusi inovatif.",
-      imageUrl: "/placeholder.svg",
+      imageUrl: "/tugas1-ai-pertanian.png", // Menggunakan gambar yang diunggah
       liveUrl: "#", // Ganti dengan URL detail proyek jika ada
     },
     {
