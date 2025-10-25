@@ -21,7 +21,7 @@ const ProjectsPage = () => {
     {
       title: "Tugas 3 – Branding Visual dan Konten Carousel",
       description: "Pengembangan identitas visual lengkap dan konten carousel yang kohesif untuk merek, didukung oleh alat Generative AI.",
-      imageUrl: "/placeholder.svg",
+      imageUrl: "/tugas3-branding-visual.png", // Menggunakan gambar yang diunggah
       liveUrl: "#",
     },
     {
