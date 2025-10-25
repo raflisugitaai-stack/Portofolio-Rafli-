@@ -53,15 +53,15 @@ const ContactPage = () => {
             <CardContent className="space-y-4 text-muted-foreground">
               <div className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 text-primary" />
-                <span><a href="mailto:email@example.com" className="hover:underline">[email@example.com]</a></span>
+                <span><a href="mailto:raflisugita728@gmail.com" className="hover:underline">raflisugita728@gmail.com</a></span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-5 w-5 text-primary" />
-                <span>[Nomor Telepon Anda]</span>
+                <span>085262860338</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span>[Lokasi Anda, misal: Jakarta, Indonesia]</span>
+                <span>Banda Aceh, Indonesia</span>
               </div>
               <Separator className="my-4" />
               <div className="flex items-center space-x-2">
