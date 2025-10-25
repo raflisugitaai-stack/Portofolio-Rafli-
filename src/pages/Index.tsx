@@ -1,13 +1,57 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import GenerativeAIProjectCard from "@/components/GenerativeAIProjectCard";
 import { Separator } from "@/components/ui/separator";
+import { CameraIcon, Trash2 } from "lucide-react";
+import { showSuccess, showError } from "@/utils/toast";
 
 const HomePage = () => {
+  const [profileImage, setProfileImage] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const savedImage = localStorage.getItem("profileImage");
+    if (savedImage) {
+      setProfileImage(savedImage);
+    }
+  }, []);
+
+  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      if (!file.type.startsWith("image/")) {
+        showError("Hanya file gambar yang diizinkan.");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const result = reader.result as string;
+        setProfileImage(result);
+        localStorage.setItem("profileImage", result);
+        showSuccess("Foto profil berhasil diunggah!");
+      };
+      reader.onerror = () => {
+        showError("Gagal membaca file gambar.");
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleRemoveImage = () => {
+    setProfileImage(null);
+    localStorage.removeItem("profileImage");
+    showSuccess("Foto profil berhasil dihapus!");
+  };
+
+  const handleButtonClick = () => {
+    fileInputRef.current?.click();
+  };
+
   const featuredProjects = [
     {
       title: "Generator Gambar AI",
@@ -35,11 +79,41 @@ const HomePage = () => {
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center text-center py-20 px-4">
-        <img
-          src="/placeholder.svg" // Ganti dengan URL foto profil profesional Anda di sini
-          alt="Foto Profil Muhammad Rafli Sugita"
-          className="w-40 h-40 rounded-full object-cover mb-8 border-4 border-primary shadow-lg"
-        />
+        <div className="relative w-40 h-40 mb-8">
+          <img
+            src={profileImage || "/placeholder.svg"}
+            alt="Foto Profil Muhammad Rafli Sugita"
+            className="w-full h-full rounded-full object-cover border-4 border-primary shadow-lg"
+          />
+          <input
+            type="file"
+            accept="image/*"
+            ref={fileInputRef}
+            onChange={handleImageUpload}
+            className="hidden"
+          />
+          <Button
+            variant="secondary"
+            size="icon"
+            className="absolute bottom-0 right-0 rounded-full w-10 h-10"
+            onClick={handleButtonClick}
+            aria-label="Unggah Foto Profil"
+          >
+            <CameraIcon className="h-5 w-5" />
+          </Button>
+          {profileImage && (
+            <Button
+              variant="destructive"
+              size="icon"
+              className="absolute top-0 right-0 rounded-full w-8 h-8"
+              onClick={handleRemoveImage}
+              aria-label="Hapus Foto Profil"
+            >
+              <Trash2 className="h-4 w-4" />
+            </Button>
+          )}
+        </div>
+
         <h1 className="text-6xl font-extrabold mb-4 text-foreground leading-tight">
           Halo, Saya <span className="text-primary">Muhammad Rafli Sugita</span>
         </h1>
