@@ -1,23 +1,88 @@
 "use client";
 
-import React from "react"; // Menghapus useState dan useEffect
+import React, { useState, useEffect, useRef } from "react";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { CameraIcon, Trash2 } from "lucide-react";
+import { showSuccess, showError } from "@/utils/toast";
 
 const HomePage = () => {
-  // Menghapus state profileImage dan useEffect karena gambar akan statis
-  const staticProfileImage = "/placeholder.svg"; // Ganti dengan path gambar profil Anda, contoh: "/profile.jpg"
+  const [profileImage, setProfileImage] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const savedImage = localStorage.getItem("profileImage");
+    if (savedImage) {
+      setProfileImage(savedImage);
+    }
+  }, []);
+
+  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64String = reader.result as string;
+        setProfileImage(base64String);
+        localStorage.setItem("profileImage", base64String);
+        showSuccess("Foto profil berhasil diunggah!");
+      };
+      reader.onerror = () => {
+        showError("Gagal mengunggah foto profil.");
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleRemoveImage = () => {
+    setProfileImage(null);
+    localStorage.removeItem("profileImage");
+    showSuccess("Foto profil berhasil dihapus!");
+  };
+
+  const handleButtonClick = () => {
+    fileInputRef.current?.click();
+  };
 
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center text-center py-20 px-4">
-        <div className="relative w-40 h-40 mb-8">
+        <div className="relative w-40 h-40 mb-8 group">
           <img
-            src={staticProfileImage} // Menggunakan gambar profil statis
+            src={profileImage || "/placeholder.svg"}
             alt="Foto Profil Muhammad Rafli Sugita"
             className="w-full h-full rounded-full object-cover border-4 border-primary shadow-lg"
           />
+          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <input
+              type="file"
+              ref={fileInputRef}
+              className="hidden"
+              accept="image/*"
+              onChange={handleImageUpload}
+            />
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-white hover:bg-white hover:text-primary mr-2"
+              onClick={handleButtonClick}
+              aria-label="Unggah Foto"
+            >
+              <CameraIcon className="h-6 w-6" />
+            </Button>
+            {profileImage && (
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-white hover:bg-white hover:text-destructive"
+                onClick={handleRemoveImage}
+                aria-label="Hapus Foto"
+              >
+                <Trash2 className="h-6 w-6" />
+              </Button>
+            )}
+          </div>
         </div>
 
         <h1 className="text-6xl font-extrabold mb-4 text-foreground leading-tight">
