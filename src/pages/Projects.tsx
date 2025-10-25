@@ -2,58 +2,58 @@
 
 import React from "react";
 import Layout from "@/components/layout/Layout";
-import GenerativeAIProjectCard from "@/components/GenerativeAIProjectCard"; // Menggunakan komponen baru
+import GenerativeAIProjectCard from "@/components/GenerativeAIProjectCard";
 
 const ProjectsPage = () => {
   const projects = [
     {
-      title: "Generator Gambar AI",
-      description: "Membuat gambar unik dari deskripsi teks menggunakan model difusi canggih.",
-      imageUrl: "/placeholder.svg", // Ganti dengan gambar proyek Anda
-      liveUrl: "#",
-      githubUrl: "#",
+      title: "Tugas 1 – Studi Kasus AI di Bidang Tertentu",
+      description: "Analisis mendalam tentang penerapan Generative AI dalam industri spesifik, menyoroti tantangan dan solusi inovatif.",
+      imageUrl: "/placeholder.svg",
+      liveUrl: "#", // Ganti dengan URL detail proyek jika ada
     },
     {
-      title: "Pembuat Video Otomatis",
-      description: "Mengubah skrip teks menjadi video dinamis dengan narasi dan visual yang dihasilkan AI.",
-      imageUrl: "/placeholder.svg", // Ganti dengan gambar proyek Anda
+      title: "Tugas 2 – Konten Carousel Instagram",
+      description: "Pembuatan serangkaian konten visual dan teks untuk Instagram menggunakan Generative AI, dirancang untuk engagement tinggi.",
+      imageUrl: "/placeholder.svg",
       liveUrl: "#",
-      githubUrl: "#",
     },
     {
-      title: "Asisten Penulisan Teks AI",
-      description: "Membantu pembuatan konten, ringkasan, dan ide tulisan dengan model bahasa besar.",
-      imageUrl: "/placeholder.svg", // Ganti dengan gambar proyek Anda
+      title: "Tugas 3 – Branding Visual dan Konten Carousel",
+      description: "Pengembangan identitas visual lengkap dan konten carousel yang kohesif untuk merek, didukung oleh alat Generative AI.",
+      imageUrl: "/placeholder.svg",
       liveUrl: "#",
-      githubUrl: "#",
     },
     {
-      title: "Platform Desain UI/UX Berbasis AI",
-      description: "Alat yang menghasilkan prototipe desain antarmuka pengguna berdasarkan preferensi dan data pengguna.",
-      imageUrl: "/placeholder.svg", // Ganti dengan gambar proyek Anda
+      title: "Tugas 4 – Pembuatan Komik dengan AI",
+      description: "Proses kreatif pembuatan komik dari skrip hingga visualisasi panel menggunakan teknologi Generative AI.",
+      imageUrl: "/placeholder.svg",
       liveUrl: "#",
-      githubUrl: "#",
     },
     {
-      title: "Sistem Rekomendasi Musik Generatif",
-      description: "Menciptakan melodi dan harmoni baru berdasarkan preferensi musik pengguna.",
-      imageUrl: "/placeholder.svg", // Ganti dengan gambar proyek Anda
+      title: "Tugas 5 – Mp3 Jingle UMKM",
+      description: "Penciptaan jingle audio yang unik dan menarik untuk Usaha Mikro, Kecil, dan Menengah (UMKM) menggunakan Generative AI.",
+      imageUrl: "/placeholder.svg",
       liveUrl: "#",
-      githubUrl: "#",
     },
     {
-      title: "Chatbot Interaktif dengan AI Percakapan",
-      description: "Mengembangkan chatbot yang dapat berinteraksi secara alami dan menghasilkan respons yang relevan.",
-      imageUrl: "/placeholder.svg", // Ganti dengan gambar proyek Anda
+      title: "Tugas 6 – Video Generator",
+      description: "Pengembangan sistem atau aplikasi yang mampu menghasilkan video pendek dari input teks atau data tertentu.",
+      imageUrl: "/placeholder.svg",
       liveUrl: "#",
-      githubUrl: "#",
+    },
+    {
+      title: "Tugas 7 – Short Movie",
+      description: "Produksi film pendek dengan bantuan Generative AI untuk skenario, visual, atau elemen kreatif lainnya.",
+      imageUrl: "/placeholder.svg",
+      liveUrl: "#",
     },
   ];
 
   return (
     <Layout>
       <div className="py-12 px-4">
-        <h2 className="text-4xl font-bold text-center mb-10 text-foreground">Proyek Generative AI Saya</h2>
+        <h2 className="text-4xl font-bold text-center mb-10 text-foreground">Proyek Portofolio Saya</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <GenerativeAIProjectCard key={index} {...project} />

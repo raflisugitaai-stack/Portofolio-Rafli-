@@ -62,6 +62,17 @@ const AboutPage = () => {
               </p>
             </CardContent>
           </Card>
+
+          <Card className="shadow-lg">
+            <CardHeader>
+              <CardTitle className="text-2xl text-primary">Minat</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Selain fokus pada Generative AI, saya juga memiliki minat besar dalam eksplorasi seni digital, pengembangan game indie, dan musik eksperimental. Saya percaya bahwa inovasi sejati seringkali lahir dari persimpangan berbagai disiplin ilmu, dan saya selalu mencari cara untuk mengintegrasikan teknologi dengan ekspresi kreatif.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </Layout>
