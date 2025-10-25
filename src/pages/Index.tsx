@@ -37,11 +37,11 @@ const HomePage = () => {
       <div className="flex flex-col items-center justify-center text-center py-20 px-4">
         <img
           src="/placeholder.svg" // Ganti dengan URL foto profil profesional Anda
-          alt="Foto Profil [Nama Anda]"
+          alt="Foto Profil Muhammad Rafli Sugita"
           className="w-40 h-40 rounded-full object-cover mb-8 border-4 border-primary shadow-lg"
         />
         <h1 className="text-6xl font-extrabold mb-4 text-foreground leading-tight">
-          Halo, Saya <span className="text-primary">[Nama Anda]</span>
+          Halo, Saya <span className="text-primary">Muhammad Rafli Sugita</span>
         </h1>
         <p className="text-2xl text-muted-foreground mb-8 max-w-3xl font-light">
           Pakar Generative AI & Inovasi Digital, Membangun Masa Depan Kreatif dengan Teknologi.
