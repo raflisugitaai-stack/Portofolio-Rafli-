@@ -1,33 +1,23 @@
 "use client";
 
-import React, { useState, useEffect } from "react"; // Menghapus useRef
+import React from "react"; // Menghapus useState dan useEffect
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-// Menghapus Separator, CameraIcon, Trash2, showSuccess, showError karena tidak lagi digunakan
 
 const HomePage = () => {
-  const [profileImage, setProfileImage] = useState<string | null>(null);
-
-  useEffect(() => {
-    const savedImage = localStorage.getItem("profileImage");
-    if (savedImage) {
-      setProfileImage(savedImage);
-    }
-  }, []);
-
-  // Fungsi handleImageUpload, handleRemoveImage, dan handleButtonClick dihapus
+  // Menghapus state profileImage dan useEffect karena gambar akan statis
+  const staticProfileImage = "/placeholder.svg"; // Ganti dengan path gambar profil Anda, contoh: "/profile.jpg"
 
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center text-center py-20 px-4">
         <div className="relative w-40 h-40 mb-8">
           <img
-            src={profileImage || "/placeholder.svg"}
+            src={staticProfileImage} // Menggunakan gambar profil statis
             alt="Foto Profil Muhammad Rafli Sugita"
             className="w-full h-full rounded-full object-cover border-4 border-primary shadow-lg"
           />
-          {/* Input file dan tombol unggah/hapus dihapus */}
         </div>
 
         <h1 className="text-6xl font-extrabold mb-4 text-foreground leading-tight">
