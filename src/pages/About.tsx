@@ -17,7 +17,7 @@ const AboutPage = () => {
             </CardHeader>
             <CardContent>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Halo! Nama saya <span className="font-semibold text-foreground">Muhammad Rafli Sugita</span>. Saya adalah seorang <span className="font-semibold text-foreground">Pakar Generative AI dan Inovasi Digital</span> dalam merancang dan mengembangkan solusi AI yang transformatif. Saya memiliki hasrat mendalam untuk mengeksplorasi potensi AI dalam menciptakan konten baru, mengotomatisasi proses kreatif, dan mendorong batas-batas teknologi. Saya percaya pada pendekatan yang tenang, cerdas, dan berkelas dalam setiap proyek yang saya tangani, memastikan hasil yang inovatif dan berkualitas tinggi.
+                Halo! Nama saya <span className="font-semibold text-foreground">Muhammad Rafli Sugita</span>. Saya memiliki hasrat mendalam untuk mengeksplorasi potensi AI dalam menciptakan konten baru, mengotomatisasi proses kreatif, dan mendorong batas-batas teknologi. Saya percaya pada pendekatan yang tenang, cerdas, dan berkelas dalam setiap proyek yang saya tangani, memastikan hasil yang inovatif dan berkualitas tinggi.
               </p>
             </CardContent>
           </Card>
