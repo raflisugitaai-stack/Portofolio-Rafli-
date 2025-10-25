@@ -2,65 +2,48 @@
 
 import React from "react";
 import Layout from "@/components/layout/Layout";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
-
-interface ProjectProps {
-  title: string;
-  description: string;
-  imageUrl: string;
-  liveUrl?: string;
-  githubUrl?: string;
-}
-
-const ProjectCard: React.FC<ProjectProps> = ({ title, description, imageUrl, liveUrl, githubUrl }) => {
-  return (
-    <Card className="flex flex-col">
-      <img src={imageUrl} alt={title} className="w-full h-48 object-cover rounded-t-lg" />
-      <CardHeader>
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{description}</CardDescription>
-      </CardHeader>
-      <CardContent className="flex-grow flex items-end justify-start gap-2">
-        {liveUrl && (
-          <Button asChild variant="outline">
-            <a href={liveUrl} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="mr-2 h-4 w-4" /> Lihat Langsung
-            </a>
-          </Button>
-        )}
-        {githubUrl && (
-          <Button asChild variant="outline">
-            <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="mr-2 h-4 w-4" /> GitHub
-            </a>
-          </Button>
-        )}
-      </CardContent>
-    </Card>
-  );
-};
+import GenerativeAIProjectCard from "@/components/GenerativeAIProjectCard"; // Menggunakan komponen baru
 
 const ProjectsPage = () => {
   const projects = [
     {
-      title: "Aplikasi Manajemen Tugas",
-      description: "Aplikasi web untuk mengelola tugas pribadi dan tim dengan fitur drag-and-drop.",
+      title: "Generator Gambar AI",
+      description: "Membuat gambar unik dari deskripsi teks menggunakan model difusi canggih.",
       imageUrl: "/placeholder.svg", // Ganti dengan gambar proyek Anda
       liveUrl: "#",
       githubUrl: "#",
     },
     {
-      title: "Situs Web E-commerce",
-      description: "Platform belanja online dengan keranjang, pembayaran, dan manajemen produk.",
+      title: "Pembuat Video Otomatis",
+      description: "Mengubah skrip teks menjadi video dinamis dengan narasi dan visual yang dihasilkan AI.",
       imageUrl: "/placeholder.svg", // Ganti dengan gambar proyek Anda
       liveUrl: "#",
       githubUrl: "#",
     },
     {
-      title: "Blog Pribadi",
-      description: "Situs blog yang responsif untuk berbagi artikel dan pemikiran.",
+      title: "Asisten Penulisan Teks AI",
+      description: "Membantu pembuatan konten, ringkasan, dan ide tulisan dengan model bahasa besar.",
+      imageUrl: "/placeholder.svg", // Ganti dengan gambar proyek Anda
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      title: "Platform Desain UI/UX Berbasis AI",
+      description: "Alat yang menghasilkan prototipe desain antarmuka pengguna berdasarkan preferensi dan data pengguna.",
+      imageUrl: "/placeholder.svg", // Ganti dengan gambar proyek Anda
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      title: "Sistem Rekomendasi Musik Generatif",
+      description: "Menciptakan melodi dan harmoni baru berdasarkan preferensi musik pengguna.",
+      imageUrl: "/placeholder.svg", // Ganti dengan gambar proyek Anda
+      liveUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      title: "Chatbot Interaktif dengan AI Percakapan",
+      description: "Mengembangkan chatbot yang dapat berinteraksi secara alami dan menghasilkan respons yang relevan.",
       imageUrl: "/placeholder.svg", // Ganti dengan gambar proyek Anda
       liveUrl: "#",
       githubUrl: "#",
@@ -69,11 +52,11 @@ const ProjectsPage = () => {
 
   return (
     <Layout>
-      <div className="py-12">
-        <h2 className="text-4xl font-bold text-center mb-10 text-foreground">Proyek Saya</h2>
+      <div className="py-12 px-4">
+        <h2 className="text-4xl font-bold text-center mb-10 text-foreground">Proyek Generative AI Saya</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
+            <GenerativeAIProjectCard key={index} {...project} />
           ))}
         </div>
       </div>
