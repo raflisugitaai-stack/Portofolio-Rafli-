@@ -27,7 +27,7 @@ const ProjectsPage = () => {
     {
       title: "Tugas 4 – Pembuatan Komik dengan AI",
       description: "Proses kreatif pembuatan komik dari skrip hingga visualisasi panel menggunakan teknologi Generative AI.",
-      imageUrl: "/placeholder.svg",
+      imageUrl: "/tugas4-komik-ai.png", // Menggunakan gambar yang diunggah
       liveUrl: "#",
     },
     {
