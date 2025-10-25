@@ -36,7 +36,7 @@ const HomePage = () => {
     <Layout>
       <div className="flex flex-col items-center justify-center text-center py-20 px-4">
         <img
-          src="/placeholder.svg" // Ganti dengan URL foto profil profesional Anda
+          src="/placeholder.svg" // Ganti dengan URL foto profil profesional Anda di sini
           alt="Foto Profil Muhammad Rafli Sugita"
           className="w-40 h-40 rounded-full object-cover mb-8 border-4 border-primary shadow-lg"
         />
