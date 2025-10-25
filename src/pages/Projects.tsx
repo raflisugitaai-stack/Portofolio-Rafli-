@@ -40,7 +40,7 @@ const ProjectsPage = () => {
       title: "Tugas 6 – Video Generator",
       description: "Pengembangan sistem atau aplikasi yang mampu menghasilkan video pendek dari input teks atau data tertentu.",
       imageUrl: "/tugas6-video-generator.png", // Menggunakan gambar yang diunggah
-      liveUrl: "#",
+      liveUrl: "https://drive.google.com/drive/folders/1DFoWvIzeDOtsYv-xSC2ZVVCWEU97AUKG?usp=drive_link",
     },
     {
       title: "Tugas 7 – Short Movie",
