@@ -33,7 +33,7 @@ const ProjectsPage = () => {
     {
       title: "Tugas 5 – Mp3 Jingle UMKM",
       description: "Penciptaan jingle audio yang unik dan menarik untuk Usaha Mikro, Kecil, dan Menengah (UMKM) menggunakan Generative AI.",
-      imageUrl: "/placeholder.svg",
+      imageUrl: "/tugas5-mp3-jingle-umkm.png",
       liveUrl: "#",
     },
     {
