@@ -16,7 +16,7 @@ const ProjectsPage = () => {
       title: "Tugas 2 – Konten Carousel Instagram",
       description: "Pembuatan serangkaian konten visual dan teks untuk Instagram menggunakan Generative AI, dirancang untuk engagement tinggi.",
       imageUrl: "/tugas2-carousel-instagram.png", // Menggunakan gambar yang diunggah
-      liveUrl: "#",
+      liveUrl: "https://drive.google.com/drive/folders/1p_kmdRfJZigZZU-jTDafmVrH0jJwhE5W?usp=drive_link", // Tautan Google Drive baru
     },
     {
       title: "Tugas 3 – Branding Visual dan Konten Carousel",
