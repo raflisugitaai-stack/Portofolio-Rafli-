@@ -24,28 +24,32 @@ const AboutPage = () => {
 
           <Card className="shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl text-primary">Keterampilan</CardTitle>
+              <CardTitle className="text-2xl text-primary">Keterampilan & Alat</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-muted-foreground">
                 <div>
-                  <h3 className="text-xl font-semibold mb-3 text-foreground">Keahlian Generative AI</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-foreground">Keterampilan (Skills)</h3>
                   <ul className="list-disc list-inside space-y-2">
-                    <li>Model Bahasa Besar (LLMs) & NLP</li>
-                    <li>Generasi Gambar & Video (Diffusion Models, GANs)</li>
-                    <li>Pembelajaran Mendalam (Deep Learning)</li>
-                    <li>Arsitektur Transformer</li>
-                    <li>Fine-tuning Model AI</li>
+                    <li>Generative AI</li>
+                    <li>Prompt Engineering</li>
+                    <li>Creative Direction</li>
+                    <li>Visual Design</li>
+                    <li>Storytelling</li>
+                    <li>Audio Production</li>
+                    <li>Video Editing</li>
+                    <li>Digital Branding</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-3 text-foreground">Alat & Teknologi</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-foreground">Alat & Teknologi (Tools)</h3>
                   <ul className="list-disc list-inside space-y-2">
-                    <li>Python, TensorFlow, PyTorch</li>
-                    <li>Hugging Face Transformers</li>
-                    <li>Docker, Kubernetes</li>
-                    <li>Cloud Platforms (AWS, GCP, Azure)</li>
-                    <li>Git & GitHub</li>
+                    <li>ChatGPT</li>
+                    <li>Google Gemini</li>
+                    <li>Flow by Google Labs</li>
+                    <li>Suno AI</li>
+                    <li>Canva</li>
+                    <li>CapCut</li>
                   </ul>
                 </div>
               </div>
