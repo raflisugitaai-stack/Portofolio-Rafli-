@@ -15,7 +15,7 @@ const ProjectsPage = () => {
     {
       title: "Tugas 2 – Konten Carousel Instagram",
       description: "Pembuatan serangkaian konten visual dan teks untuk Instagram menggunakan Generative AI, dirancang untuk engagement tinggi.",
-      imageUrl: "/placeholder.svg",
+      imageUrl: "/tugas2-carousel-instagram.png", // Menggunakan gambar yang diunggah
       liveUrl: "#",
     },
     {
