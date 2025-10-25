@@ -45,7 +45,7 @@ const ProjectsPage = () => {
     {
       title: "Tugas 7 – Short Movie",
       description: "Produksi film pendek dengan bantuan Generative AI untuk skenario, visual, atau elemen kreatif lainnya.",
-      imageUrl: "/placeholder.svg",
+      imageUrl: "/tugas7-short-movie.png",
       liveUrl: "#",
     },
   ];
