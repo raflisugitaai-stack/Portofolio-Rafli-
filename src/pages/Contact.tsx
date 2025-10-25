@@ -7,8 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin } from "lucide-react"; // Menghapus import Linkedin dan Github
-import { Separator } from "@/components/ui/separator";
+import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
+import { Separator } from "@/components/ui/separator"; // Import Separator
 
 const ContactPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -48,22 +48,30 @@ const ContactPage = () => {
 
           <Card>
             <CardHeader>
-              <CardTitle>Informasi Kontak</CardTitle> {/* Mengubah judul */}
+              <CardTitle>Informasi Kontak & Sosial</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4 text-muted-foreground">
               <div className="flex items-center space-x-2">
                 <Mail className="h-5 w-5 text-primary" />
-                <span><a href="mailto:raflisugita728@gmail.com" className="hover:underline">raflisugita728@gmail.com</a></span>
+                <span><a href="mailto:email@example.com" className="hover:underline">[email@example.com]</a></span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-5 w-5 text-primary" />
-                <span>085262860338</span>
+                <span>[Nomor Telepon Anda]</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-5 w-5 text-primary" />
-                <span>Banda Aceh, Indonesia</span>
+                <span>[Lokasi Anda, misal: Jakarta, Indonesia]</span>
               </div>
-              {/* Menghapus Separator dan tautan LinkedIn/GitHub */}
+              <Separator className="my-4" />
+              <div className="flex items-center space-x-2">
+                <Linkedin className="h-5 w-5 text-primary" />
+                <span><a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn Profil Anda</a></span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Github className="h-5 w-5 text-primary" />
+                <span><a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:underline">GitHub Profil Anda</a></span>
+              </div>
               <p className="mt-4">
                 Jangan ragu untuk menghubungi saya melalui formulir atau informasi di atas. Saya akan berusaha membalas secepatnya!
               </p>

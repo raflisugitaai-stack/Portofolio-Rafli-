@@ -92,9 +92,11 @@ const HomePage = () => {
         <h1 className="text-6xl font-extrabold mb-4 text-foreground leading-tight">
           Halo, Saya <span className="text-primary">Muhammad Rafli Sugita</span>
         </h1>
-        {/* Baris teks yang dihapus */}
+        <p className="text-2xl text-muted-foreground mb-8 max-w-3xl font-light">
+          Pakar Generative AI & Inovasi Digital, Membangun Masa Depan Kreatif dengan Teknologi.
+        </p>
         <p className="text-lg text-gray-700 dark:text-gray-300 mb-12 max-w-4xl">
-          Perkenalkan, saya Muhammad Rafli Sugita, lulusan S1 Ilmu Kelautan dari Universitas Syiah Kuala. Selama masa studi, saya aktif mengembangkan keterampilan kepemimpinan dan manajemen waktu melalui organisasi kemahasiswaan. Saya juga memiliki pengalaman sebagai Asisten Laboratorium, yang menumbuhkan kemampuan komunikasi, ketelitian, serta tanggung jawab dalam bekerja. Di samping itu, saya terbiasa menggunakan aplikasi Microsoft Office, seperti Word dan Excel, untuk mendukung produktivitas kerja.
+          Dengan latar belakang yang kuat dalam pengembangan perangkat lunak dan kecerdasan buatan, saya bersemangat untuk menciptakan solusi inovatif yang mendorong batas-batas kreativitas digital. Saya fokus pada pengembangan aplikasi yang memanfaatkan kekuatan Generative AI untuk menghasilkan konten yang unik dan bermakna.
         </p>
         <div className="space-x-4 mb-20">
           <Button asChild size="lg" className="px-8 py-3 text-lg">
