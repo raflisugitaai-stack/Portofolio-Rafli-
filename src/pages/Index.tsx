@@ -11,7 +11,7 @@ const HomePage = () => {
       <div className="flex flex-col items-center justify-center text-center py-20 px-4">
         <div className="relative w-40 h-40 mb-8 group">
           <img
-            src="/placeholder.svg" // Kembali menggunakan gambar placeholder statis
+            src="/profile-rafli.jpg" // Menggunakan gambar profil yang baru diunggah
             alt="Foto Profil Muhammad Rafli Sugita"
             className="w-full h-full rounded-full object-cover border-4 border-primary shadow-lg"
           />
