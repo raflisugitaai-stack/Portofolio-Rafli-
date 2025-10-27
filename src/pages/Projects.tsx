@@ -10,7 +10,7 @@ const ProjectsPage = () => {
       title: "Tugas 1 – Studi Kasus AI di Bidang Tertentu",
       description: "Analisis mendalam tentang penerapan Generative AI dalam industri spesifik, menyoroti tantangan dan solusi inovatif.",
       imageUrl: "/tugas1-ai-case-study.png", // Menggunakan gambar yang baru diunggah
-      liveUrl: "https://drive.google.com/drive/folders/1nY6mX4RLxkdmlRRukSIGJlFbJIjn-JqS?usp=drive_link", // Tautan Google Drive
+      liveUrl: "https://drive.google.com/drive/folders/1nY6mX4RLXkdmlRRukSIGJlFbJIjn-JqS?usp=drive_link", // Tautan Google Drive
     },
     {
       title: "Tugas 2 – Konten Carousel Instagram",
